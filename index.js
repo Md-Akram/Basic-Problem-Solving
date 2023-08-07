@@ -181,17 +181,120 @@
 
 // Problem 13
 
-function isInteger(num) {
-    if (typeof num !== 'number') {
-        return "please enter a number"
-    } else {
-        if (num % 1 === 0) {
-            return true
-        } else {
-            return false
-        }
-    }
+// function isInteger(num) {
+//     if (typeof num !== 'number') {
+//         return "please enter a number"
+//     } else {
+//         if (num % 1 === 0) {
+//             return true
+//         } else {
+//             return false
+//         }
+//     }
 
+// }
+
+// console.log(isInteger(5)); // Should output true
+
+// Problem 14
+
+// function isJavascript(str) {
+//     if (str.endsWith('.js')) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+
+// console.log(isJavascript('hello.js')); // Should output true
+
+// Problem 15
+
+// function mindGame(x) {
+//     if (typeof x !== 'number') {
+//         return 'Please enter a number'
+//     }
+//     if (x <= 0) {
+//         return 'Please enter a positive number'
+//     }
+
+//     return (((x * 3) + 10) / 2) - 5
+// }
+
+// console.log(mindGame(0)); 
+
+// Problem 16
+
+// function isLGSeven(x) {
+//     if (typeof x !== "number") {
+//         return 'please provide a number'
+//     } else {
+//         let sub = x - 7
+//         if (sub < 7) {
+//             return sub
+//         } else {
+//             return x * 2
+//         }
+//     }
+// }
+
+// console.log(isLGSeven(14)); // Should output 6
+
+// Problem 17
+
+// function findingBadData(arr) {
+//     if (!Array.isArray(arr)) {
+//         return 'please provide an array of numbers'
+//     } else {
+//         let badDataCount = 0
+//         for (let num of arr) {
+//             if (typeof num !== 'number') {
+//                 return 'please provide an array of numbers'
+//             } else if (num < 0) {
+//                 badDataCount++
+//             }
+//         }
+//         return badDataCount
+//     }
+// }
+
+// console.log(findingBadData([1, 2, 3])); // Should output 3
+
+// Problem 18
+
+// function gemsToDiamond(x, y, z) {
+//     if (typeof x !== 'number' || typeof y !== 'number' || typeof z !== 'number') {
+//         return 'please provide numbers'
+//     } else if (x < 0 || y < 0 || z < 0) {
+//         return 'please provide positive numbers'
+//     } else {
+//         let powerOfX = 21;
+//         let powerOfY = 32;
+//         let powerOfZ = 43;
+//         let totalPower = (x * powerOfX) + (y * powerOfY) + (z * powerOfZ)
+//         if (totalPower > (1000 * 2)) {
+//             totalPower = totalPower - (1000 * 2)
+//         }
+//         return totalPower
+//     }
+// }
+
+// console.log(gemsToDiamond(1, 1, 1));
+// console.log(gemsToDiamond(10, 30.6, 20));
+// console.log(gemsToDiamond(100, 5, 1)); 
+
+// Problem 19
+
+function printDetails(obj) {
+    if (typeof obj !== 'object') {
+        return 'please provide an object'
+    } else {
+        let arr = []
+        for (let key in obj) {
+            arr.push('amar ' + key + ' ' + (obj[key] ? obj[key] : 'nai'))
+        }
+        return arr.join(', ')
+    }
 }
 
-console.log(isInteger(5)); // Should output true
+console.log(printDetails({ name: 'John', age: 23, email: "" }));
