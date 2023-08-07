@@ -82,16 +82,116 @@
 
 // console.log(longestWordLength("The quick brown fox jumps over the lazy dog"));
 
+// Problem 7
 
-function countVowels(str) {
-    const vowels = ['a', 'e', 'i', 'o', 'u']
-    let count = 0
-    for (let char of str.toLowerCase()) {
-        if (vowels.includes(char)) {
-            count++
+
+// function countVowels(str) {
+//     const vowels = ['a', 'e', 'i', 'o', 'u']
+//     let count = 0
+//     for (let char of str.toLowerCase()) {
+//         if (vowels.includes(char)) {
+//             count++
+//         }
+//     }
+//     return count
+// }
+
+// console.log(countVowels("Hello World")); // Should output 3 (e, o, o)
+
+// Problem 8
+
+// function sumOfMultiples(num1, num2, limit) {
+//     let sum = 0
+//     for (let i = 1; i < limit; i++) {
+//         if (i % num1 === 0 || i % num2 === 0) {
+//             sum += i
+//         }
+//     }
+//     return sum
+// }
+
+// console.log(sumOfMultiples(3, 5, 10)); // Should output 23 (3 + 5 + 6 + 9)
+
+// Problem 9
+
+// function titleCase(sentence) {
+//     // Your code here
+//     let newWords = []
+//     const words = sentence.split(' ')
+//     for (let word of words) {
+//         word = word.toUpperCase()
+//         word = word[0] + word.slice(1).toLowerCase()
+//         newWords.push(word)
+
+//     }
+//     return newWords.join(' ')
+// }
+
+// console.log(titleCase("hello world")); // Should output "Hello World"
+
+
+// Problem 10
+
+// function removeDuplicates(arr) {
+//     let newArr = []
+//     for (let num of arr) {
+//         if (newArr.indexOf(num) === -1) {
+//             newArr.push(num)
+//         }
+//     }
+//     return newArr
+// }
+
+// console.log(removeDuplicates([1, 2, 3, 2, 4, 3, 5])); // Should output [1, 2, 3, 4, 5]
+
+
+// Problem 11
+
+// function fizzBuzz() {
+//     let arr = []
+//     for (let i = 1; i <= 100; i++) {
+//         if (i % 3 === 0 && i % 5 === 0) {
+//             arr.push("FizzBuzz")
+//         } else if (i % 3 === 0) {
+//             arr.push("Fizz")
+//         } else if (i % 5 === 0) {
+//             arr.push("Buzz")
+//         } else {
+//             arr.push(i)
+//         }
+//     }
+//     return arr
+// }
+
+// console.log(fizzBuzz());; // Should output the FizzBuzz sequence
+
+// Problem 12
+
+// function arraySum(arr) {
+//     let sum = 0;
+//     for (let num of arr) {
+//         sum = sum + num
+//     }
+//     return sum
+// }
+
+// console.log(arraySum([1, 2, 3, 4, 5])); // Should output 15
+// console.log(arraySum([-1, 0, 1]));     // Should output 0
+
+
+// Problem 13
+
+function isInteger(num) {
+    if (typeof num !== 'number') {
+        return "please enter a number"
+    } else {
+        if (num % 1 === 0) {
+            return true
+        } else {
+            return false
         }
     }
-    return count
+
 }
 
-console.log(countVowels("Hello World")); // Should output 3 (e, o, o)
+console.log(isInteger(5)); // Should output true
